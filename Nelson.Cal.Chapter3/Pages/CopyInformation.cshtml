@@ -1,0 +1,63 @@
+﻿@page "/"
+@model Nelson.Cal.Chapter3.Pages.CopyInformationModel
+@{
+}
+
+<form method="post">
+    <div>
+        <table>
+            <tr>
+                <td><label>First Name</label></td>
+                <td><input asp-for="FirstName" /></td>
+                <td><label style="color: @Model.Color">@Model.FirstName</label></td>
+            </tr>
+            <tr>
+                <td><label>Middle Initial</label></td>
+                <td><input asp-for="MiddleInitial"/></td>
+                <td><label style="color: @Model.Color">@Model.MiddleInitial</label></td>
+            </tr>
+
+            <tr>
+                <td><label>Last Name</label></td>
+                <td><input asp-for="LastName"/></td>
+                <td><label style="color: @Model.Color">@Model.LastName</label></td>
+
+            </tr>
+
+            <tr>
+                <td><label>Address</label></td>
+                <td><input asp-for="Address"/></td>
+                <td><label style="color: @Model.Color">@Model.Address</label></td>
+            </tr>
+
+            <tr>
+                <td><label>City</label></td>
+                <td><input asp-for="City" /></td>
+                <td><label style="color: @Model.Color">@Model.City</label></td>
+            </tr>
+
+            <tr>
+                <td><label>State</label></td>
+                <td><input asp-for="State" /></td>
+                <td><label style="color: @Model.Color">@Model.State</label></td>
+            </tr>
+
+            <tr>
+                <td><label>Zip Code</label></td>
+                <td><input asp-for="ZipCode"/></td>
+                <td><label style="color: @Model.Color">@Model.ZipCode</label></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Copy" asp-page-handler="Copy" />  |  
+                    <input type="submit" value="Clear" asp-page-handler="Clear" />  |  
+                    <input type="submit" value="Color" asp-page-handler="Color" />
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+</form>
